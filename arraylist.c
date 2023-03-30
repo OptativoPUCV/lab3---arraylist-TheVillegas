@@ -26,6 +26,7 @@ ArrayList *createList(void) {
 void append(ArrayList * l, void * data){
   //agregar dato al final osea en size
   l->data[l->size] = data;
+  l->data = (void *)realloc(2*sizeof(void));
   l->size++;
   
   

@@ -30,3 +30,28 @@ Thu 30 Mar 2023 03:00:04 PM UTC:
  tests:  2|5
 total_score: 15/70
 cf04e58
+Thu 30 Mar 2023 03:04:54 PM UTC: 
+ arraylist.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:29:29: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   29 |   l->data = (void *)realloc(2*sizeof(void));
+      |                             ^~~~~~~~~~~~~~
+      |                             |
+      |                             long unsigned int
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:29: note: expected ‘void *’ but argument is of type ‘long unsigned int’
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |                       ~~~~~~^~~~~
+In file included from test.c:5:
+arraylist.c:29:21: error: too few arguments to function ‘realloc’
+   29 |   l->data = (void *)realloc(2*sizeof(void));
+      |                     ^~~~~~~
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:14: note: declared here
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |              ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+72ac705
