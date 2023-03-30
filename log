@@ -201,3 +201,14 @@ Thu 30 Mar 2023 08:07:03 PM UTC:
  tests:  8|2
 total_score: 40/70
 a696b05
+Thu 30 Mar 2023 08:30:52 PM UTC: 
+ arraylist.c | 20 +++++++++++++++++++-
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘pop’:
+arraylist.c:66:37: error: ‘j’ undeclared (first use in this function)
+   66 |   for(int k = i ; i < l->size - 1 ; j++)
+      |                                     ^
+arraylist.c:66:37: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+7d2622e
