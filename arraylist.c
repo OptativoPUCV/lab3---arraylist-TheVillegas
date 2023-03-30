@@ -26,7 +26,7 @@ ArrayList *createList(void) {
 void append(ArrayList * l, void * data){
   //agregar dato al final osea en size
   l->data[l->size] = data;
-  l->capacity++;
+  l->size++;
   
   
 }
