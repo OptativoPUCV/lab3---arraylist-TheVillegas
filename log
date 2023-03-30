@@ -78,3 +78,9 @@ arraylist.c:43:1: error: expected ‘(’ before ‘}’ token
       | (
 Compilation failed
 71e071f
+Thu 30 Mar 2023 07:13:53 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|4
+total_score: 20/70
+ba403aa
