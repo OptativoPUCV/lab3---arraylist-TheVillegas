@@ -63,13 +63,10 @@ void* pop(ArrayList * l, int i){
   void *eliminado = NULL;
   eliminado = l->data[i];
 
-
-  
-  for(int k = i ; k < l->size - 1 ; k++)
-  {
-    l->data[k] = l->data[k+1];
-  }
-
+  for(int k = i ; i < l->size - 1 ; k++)
+    {
+      l->data[k] = l->data[k+1];
+    }
     l->size--;
   return eliminado;
  
