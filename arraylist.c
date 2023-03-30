@@ -38,12 +38,13 @@ void append(ArrayList * l, void * data){
 }
 
 void push(ArrayList * l, void * data, int i){
+  if(i>l->size) return;
   if(l->size == l->capacity)
   {
     l->capacity *=2;
     l->data= (void**)realloc(l->data,l->capacity * sizeof(void**));
   }
-  if(i>l->size) return;
+
   for(int k = l->size ; k < i ; k--)
     {
       l->data[k] = l->data[k-1];
