@@ -38,6 +38,7 @@ void append(ArrayList * l, void * data){
 }
 
 void push(ArrayList * l, void * data, int i){
+  if
 
 }
 
